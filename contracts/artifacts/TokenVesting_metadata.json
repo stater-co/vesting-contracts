@@ -1,0 +1,436 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "start",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cliffDuration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "duration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "revocable",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "TokenVestingRevoked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "TokensReleased",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "beneficiary",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "cliff",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "duration",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "release",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "released",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "revocable",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "revoke",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "revoked",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "start",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract IERC20",
+						"name": "token",
+						"type": "address"
+					}
+				],
+				"name": "vested",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "A token holder contract that can release its token balance gradually like a typical vesting scheme, with a cliff and vesting period. Optionally revocable by the owner.",
+			"kind": "dev",
+			"methods": {
+				"beneficiary()": {
+					"returns": {
+						"_0": "the beneficiary of the tokens."
+					}
+				},
+				"cliff()": {
+					"returns": {
+						"_0": "the cliff time of the token vesting."
+					}
+				},
+				"constructor": {
+					"details": "Creates a vesting contract that vests its balance of any ERC20 token to the beneficiary, gradually in a linear fashion until start + duration. By then all of the balance will have vested.",
+					"params": {
+						"beneficiary": "address of the beneficiary to whom vested tokens are transferred",
+						"cliffDuration": "duration in seconds of the cliff in which tokens will begin to vest",
+						"duration": "duration in seconds of the period in which the tokens will vest",
+						"revocable": "whether the vesting is revocable or not",
+						"start": "the time (as Unix time) at which point vesting starts"
+					}
+				},
+				"duration()": {
+					"returns": {
+						"_0": "the duration of the token vesting."
+					}
+				},
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"release(address)": {
+					"params": {
+						"token": "ERC20 token which is being vested"
+					}
+				},
+				"released(address)": {
+					"returns": {
+						"_0": "the amount of the token released."
+					}
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+				},
+				"revocable()": {
+					"returns": {
+						"_0": "true if the vesting is revocable."
+					}
+				},
+				"revoke(address)": {
+					"params": {
+						"token": "ERC20 token which is being vested"
+					}
+				},
+				"revoked(address)": {
+					"returns": {
+						"_0": "true if the token is revoked."
+					}
+				},
+				"start()": {
+					"returns": {
+						"_0": "the start time of the token vesting."
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				},
+				"vested(address)": {
+					"returns": {
+						"_0": "the vested amount of the token vesting."
+					}
+				}
+			},
+			"title": "TokenVesting",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"release(address)": {
+					"notice": "Transfers vested tokens to beneficiary."
+				},
+				"revoke(address)": {
+					"notice": "Allows the owner to revoke the vesting. Tokens already vested remain in the contract, the rest are returned to the owner."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"../vesting-contracts/contracts/NewTokenVesting.sol": "TokenVesting"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"../vesting-contracts/contracts/Address.sol": {
+			"keccak256": "0x0f34f2051e86cd6754ce542b10ce1a69a19b9a20b319a53cfdad3e7803e8d42c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://847c4bf1a44781022885c257bdff8fe50b7e4d015769ef752364cbe85a46a864",
+				"dweb:/ipfs/QmXTHU8d7GKa6bm2Dh3KWLRjLgNdMyfbEe6nzxeZgdaTCY"
+			]
+		},
+		"../vesting-contracts/contracts/Context.sol": {
+			"keccak256": "0x1f46a37c1966db8e59f608365062afa9f1fefcfb22530d60e1b9f6aa2389319c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://30e591959ab67487651d0d53044c9ff1b8ea94c7abae835c130468e63f8d66f1",
+				"dweb:/ipfs/QmbJXqFaY9LVJ8V2XFwCRNCezBMh7noQrajaPCXz57D8sy"
+			]
+		},
+		"../vesting-contracts/contracts/IERC20.sol": {
+			"keccak256": "0x00c6bc8fb8277a122d8d71118dc1336a625bcc11c830ddbe5f00b2ffff78575c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2d3a6918f3bc7a94b9742c67b16e41ad226ed292d56c710fbd6781b8727fcece",
+				"dweb:/ipfs/QmPWe5V8PHUTNHrMkQq37AVTxmwBKxXgqjk6fcAAYvRNEs"
+			]
+		},
+		"../vesting-contracts/contracts/NewTokenVesting.sol": {
+			"keccak256": "0x53647802c1c288b02dac234a8c44d232ff6395bd0e74b64e6c4d91a6081a2738",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://13795321326f5960a8264706797bb35d5d53d016d09b69f2da660ede1c1172d8",
+				"dweb:/ipfs/QmZtXiie2PuSRfVZ2WRYiJMjh3PmfXJhzgoxzYkpvNfco7"
+			]
+		},
+		"../vesting-contracts/contracts/Ownable.sol": {
+			"keccak256": "0xcce7014030c967d5fde968847a2b1e7224ba479aed7705b8e57766d3bb018c16",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b6dd45119e7905b012fc2de41833ea6f7ff72ab0e56e9ab10672346c89eb1f6e",
+				"dweb:/ipfs/QmaGo2nmy41A6MAxezUydH32hZZ4fXLSNF2uCcJJ3RQ182"
+			]
+		},
+		"../vesting-contracts/contracts/SafeERC20.sol": {
+			"keccak256": "0x8541092cf2902b3184518273f8e539096a1020025959330c55bd93ec00b9baf9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d900578d7498874005ed1f536f12f6e353740f36dcc5d1801b0900d22676b241",
+				"dweb:/ipfs/QmZFynkuKoVxfVE9ecyFkKrwUAMsyEZKkQfxapLR7u75kY"
+			]
+		},
+		"../vesting-contracts/contracts/SafeMath.sol": {
+			"keccak256": "0x679b7e9537d72a9e53844fc7c94eb2858471e37e5fa3303e02af72eb0e8ff122",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3cbf6af894ebf47c135feda4cf678c60e95984d408883fbddfa9cf79384d9c62",
+				"dweb:/ipfs/QmVs1pzHARMcGqX2FCfonqxycxEZKJEYKrZV4nhYB5y9Dn"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,71 @@
+{
+	"compiler": {
+		"version": "0.6.12+commit.27d51765"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Wrappers around ERC20 operations that throw on failure (when the token contract returns false). Tokens that return no value (and instead revert or throw on failure) are also supported, non-reverting calls are assumed to be successful. To use this library you can add a `using SafeERC20 for ERC20;` statement to your contract, which allows you to call the safe operations as `token.safeTransfer(...)`, etc.",
+			"kind": "dev",
+			"methods": {},
+			"title": "SafeERC20",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"../vesting-contracts/contracts/SafeERC20.sol": "SafeERC20"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"../vesting-contracts/contracts/Address.sol": {
+			"keccak256": "0x0f34f2051e86cd6754ce542b10ce1a69a19b9a20b319a53cfdad3e7803e8d42c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://847c4bf1a44781022885c257bdff8fe50b7e4d015769ef752364cbe85a46a864",
+				"dweb:/ipfs/QmXTHU8d7GKa6bm2Dh3KWLRjLgNdMyfbEe6nzxeZgdaTCY"
+			]
+		},
+		"../vesting-contracts/contracts/IERC20.sol": {
+			"keccak256": "0x00c6bc8fb8277a122d8d71118dc1336a625bcc11c830ddbe5f00b2ffff78575c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2d3a6918f3bc7a94b9742c67b16e41ad226ed292d56c710fbd6781b8727fcece",
+				"dweb:/ipfs/QmPWe5V8PHUTNHrMkQq37AVTxmwBKxXgqjk6fcAAYvRNEs"
+			]
+		},
+		"../vesting-contracts/contracts/SafeERC20.sol": {
+			"keccak256": "0x8541092cf2902b3184518273f8e539096a1020025959330c55bd93ec00b9baf9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d900578d7498874005ed1f536f12f6e353740f36dcc5d1801b0900d22676b241",
+				"dweb:/ipfs/QmZFynkuKoVxfVE9ecyFkKrwUAMsyEZKkQfxapLR7u75kY"
+			]
+		},
+		"../vesting-contracts/contracts/SafeMath.sol": {
+			"keccak256": "0x679b7e9537d72a9e53844fc7c94eb2858471e37e5fa3303e02af72eb0e8ff122",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3cbf6af894ebf47c135feda4cf678c60e95984d408883fbddfa9cf79384d9c62",
+				"dweb:/ipfs/QmVs1pzHARMcGqX2FCfonqxycxEZKJEYKrZV4nhYB5y9Dn"
+			]
+		}
+	},
+	"version": 1
+}

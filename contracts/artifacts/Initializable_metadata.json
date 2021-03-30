@@ -1,0 +1,55 @@
+{
+	"compiler": {
+		"version": "0.8.2+commit.661d1103"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Helper contract to support initializer functions. To use it, replace the constructor with a function that has the `initializer` modifier. WARNING: Unlike constructors, initializer functions must be manually invoked. This applies both to deploying an Initializable contract, as well as extending an Initializable contract via inheritance. WARNING: When used with inheritance, manual care must be taken to not invoke a parent initializer twice, or ensure that all initializers are idempotent, because this is not dealt with automatically as with constructors.",
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"initialized": {
+					"details": "Indicates that the contract has been initialized."
+				},
+				"initializing": {
+					"details": "Indicates that the contract is in the process of being initialized."
+				}
+			},
+			"title": "Initializable",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"../vesting-contracts/contracts/Initializable.sol": "Initializable"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"../vesting-contracts/contracts/Initializable.sol": {
+			"keccak256": "0x2526d660e7799c615ed3a70672af0697d9636166e18f003eab4f388cf1a847ea",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://ba686bf068bec4e9ac2954e12168cf596b79ee3ffa191fa98c188c1e68df4363",
+				"dweb:/ipfs/QmcEdjJCwfXPsx2ESairvwr4TE9381LN3KrZRjoxxKE1Au"
+			]
+		}
+	},
+	"version": 1
+}
