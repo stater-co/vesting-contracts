@@ -116,7 +116,7 @@ contract TokenVesting is Ownable {
      * @notice Transfers vested tokens to beneficiary.
      * @param token ERC20 token which is being vested
      */
-    function release(IERC20 token) public {
+    function release(IERC20 token) public onlyOwner {
         uint256 unreleased = _releasableAmount(token);
 
         require(unreleased > 0, "TokenVesting: no tokens are due");
